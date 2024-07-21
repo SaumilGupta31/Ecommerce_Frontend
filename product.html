@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Trading Co. Products</title>
+</head>
+<link rel="stylesheet" href="products.css">
+<link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<body>
+    <div class="overlay" onclick="hideMenu()"></div>
+
+    <nav>
+        <img src="logo.png" alt="logo">
+        <button class="menu" onclick="toggleMenu()"><i class='bx bx-menu'></i></button>
+        <button class="cross" onclick="rtoggleMenu()"><i class='bx bx-x'></i></button>
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <div class="dropdown">
+                <li><a onclick="dropdownDisplay()">Services</a></li>
+                <div class="dropdown-content">
+                    <a href="#services">AC Repairing</a>
+                    <a href="#services">Washing Machine Repairing</a>
+                    <a href="#services">Refridgerator Repairing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li><a onclick="dropdownDisplay()">Products</a></li>
+                <div class="dropdown-content dropdown1">
+                    <a href="#">AC Spare Parts</a>
+                    <a href="#">Washing Machine Spare Parts</a>
+                    <a href="#">Refridgerator Spare Parts</a>
+                    <a href="#">Tools</a>
+                </div>
+            </div>
+            <li><a href="">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <div class="p-home-container">
+        <div class="home-page">
+            <img src="products-img.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <div class="home-">
+                <h>Ajay Trading Co. Products</h>
+                <p>"A Wide Range of Spare Parts and Tools are available"</p>
+                <div class="search-p">
+                    <form onsubmit="searchProducts(event)">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="products-main">
+        <button class="filter-button" onclick="displayFilter()"><i class='bx bx-filter'></i>Filters</button>
+        <div class="filter">
+            <div class="filter-content">
+                <div class="f">
+                    <h1>Category</h1>
+                    <div class="button-flex">
+                        <button onclick="crossCome(0); filterProducts(ac)"><span class="i1"><i
+                                    class='bx bx-x'></i></span>AC Spare Parts</button>
+                        <button onclick="crossCome(1); filterWm()"><span class="i2"><i
+                                    class='bx bx-x'></i></span>Washing Machine Spare Parts</button>
+                        <button onclick="crossCome(2); fitlerR()"><span class="i3"><i
+                                    class='bx bx-x'></i></span>Refridgerator Spare Parts</button>
+                        <button onclick="crossCome(3); fitlerTool()"><span class="i4"><i
+                                    class='bx bx-x'></i></span>Tools</button>
+                    </div>
+                </div>
+                <div class="f">
+                    <h1>Price</h1>
+                    <div class="button-flex">
+                        <button onclick="crossCome(4); priceOne()"><span class="i5"><i class='bx bx-x'></i></span>10 -
+                            50Rs</button>
+                        <button onclick="crossCome(5)"><span class="i6"><i class='bx bx-x'></i></span>50 -
+                            100Rs</button>
+                        <button onclick="crossCome(6)"><span class="i7"><i class='bx bx-x'></i></span>100 -
+                            500Rs</button>
+                        <button onclick="crossCome(7)"><span class="i8"><i
+                                    class='bx bx-x'></i></span>500-1000Rs</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="products-container">
+            <div class="p-box">
+                <img src="ac wall stand.jpg" alt="">
+                <h1 class="ac">AC Wall Stand</h1>
+                <p class="price"> Price: ₹320</p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac floor stand.jpg" alt="">
+                <h1>AC Floor Stand</h1>
+                <p class="price">Price: ₹215</p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac compressor.jpg" alt="">
+                <h1>AC compressor</h1>
+                <p class="price">Price: ₹10000 </p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac stablizer.jpg" alt="">
+                <h1>AC Stablizer</h1>
+                <p class="price">Price: ₹6000</p>
+            </div>
+            <div class="p-box ac">
+                <img src="4 to 3 core wire.jpg" alt="">
+                <h1>4 to 3 core wire</h1>
+                <p class="price">Price: ₹1500 </p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac gas.webp" alt="">
+                <h1>Refrigeration Gas</h1>
+                <p class="price"> Price: ₹400</p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac copper pipe.jpg" alt="">
+                <h1>AC Copper Pipe</h1>
+                <p class="price">Price: ₹1000</p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac insultion.jpg" alt="">
+                <h1>AC Insultion</h1>
+                <p class="price">Price: ₹14</p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac capacitor.jpg" alt="">
+                <h1>AC Capacitor</h1>
+                <p class="price">Price: ₹150</p>
+            </div>
+            <div class="p-box ac">
+                <img src="indoor outdoor motor.webp" alt="">
+                <h1 style="font-size: 15px;">AC Indoor outdoor Motor</h1>
+                <p class="price">Price: ₹3000</p>
+            </div>
+            <div class="p-box ac">
+                <img src="condenser-coil.jpeg" alt="">
+                <h1>AC condenser coil</h1>
+                <p class="price">Price: ₹7500</p>
+            </div>
+            <div class="p-box ac">
+                <img src="ac remote.jpg" alt="">
+                <h1>AC Remote <span style="font-size: 15px;">(All Brands)</span></h1>
+                <p class="price">Price: ₹500</p>
+            </div>
+            <div class="p-box r">
+                <img src="fridge compressor.jpg" alt="">
+                <h1 style="font-size: 15px;">Refridgerator Compressor</h1>
+                <p class="price">Price: ₹3300</p>
+            </div>
+            <div class="p-box r">
+                <img src="relay.jpg" alt="">
+                <h1>Relay</h1>
+                <p class="price">Price: ₹100</p>
+            </div>
+            <div class="p-box r">
+                <img src="fridge bulb.webp" alt="">
+                <h1>Refridgerator Bulb</h1>
+                <p class="price">Price: ₹220</p>
+            </div>
+            <div class="p-box r">
+                <img src="fridge stand.jpg" alt="">
+                <h1>Fridge Stand</h1>
+                <p class="price">Price: ₹449</p>
+            </div>
+            <div class="p-box r">
+                <img src="frige fan motor.jpg" alt="">
+                <h1>Fan Motor</h1>
+                <p class="price">Price: ₹550</p>
+            </div>
+            <div class="p-box r">
+                <img src="fridge coil.jpg" alt="">
+                <h1>Fridge Coil</h1>
+                <p class="price">Price: ₹170</p>
+            </div>
+            <div class="p-box r">
+                <img src="thermostat.jpg" alt="">
+                <h1>Thermostat</h1>
+                <p class="price">Price: ₹300</p>
+            </div>
+            <div class="p-box r">
+                <img src="dfrost timer.webp" alt="">
+                <h1>Defrost Timer</h1>
+                <p class="price">Price: ₹549</p>
+            </div>
+            <div class="p-box r">
+                <img style="height: 190px;" src="fridge biometal.jpg" alt="">
+                <h1>Fridge Biometal</h1>
+                <p class="price">Price: ₹400</p>
+            </div>
+            <div class="p-box wm">
+                <img src="spin motor.jpeg" alt="">
+                <h1>Spin Motor</h1>
+                <p class="price">Price: ₹700</p>
+            </div>
+            <div class="p-box wm">
+                <img src="wash motor.jpeg" alt="">
+                <h1>Wash Motor</h1>
+                <p class="price">Price: ₹749</p>
+            </div>
+            <div class="p-box wm">
+                <img style="height: 195px;" src="spin timer.jpg" alt="">
+                <h1>Spin Timer</h1>
+                <p class="price">Price: ₹290</p>
+            </div>
+            <div class="p-box wm">
+                <img style="height: 195px;" src="fridge biometal.jpg" alt="">
+                <h1 >Belt</h1>
+                <p class="price">Price: ₹330</p>
+            </div>
+            <div class="p-box wm">
+                <img src="spin cover.jpg" alt="">
+                <h1>Spin Cover</h1>
+                <p class="price">Price: ₹200</p>
+            </div>
+            <div class="p-box wm">
+                <img src="rubber drain.jpg" alt="">
+                <h1>Rubber Drain</h1>
+                <p class="price">Price: ₹145</p>
+            </div>
+            <div class="p-box wm">
+                <img src="buffer seal.jpeg" alt="">
+                <h1>Buffer Seal</h1>
+                <p class="price">Price: ₹100</p>
+            </div>
+            <div class="p-box wm">
+                <img src="capacitor.webp" alt="">
+                <h1>Capacitor (for W.M.)</h1>
+                <p class="price">Price: ₹300</p>
+            </div>
+            <div class="p-box wm">
+                <img src="dscaling powder.webp" alt="">
+                <h1>Dscaling Powder</h1>
+                <p class="price">Price: ₹200</p>
+            </div>
+            <div class="p-box wm">
+                <img src="drain pipe.jpg" alt="">
+                <h1>Drain Pipe</h1>
+                <p class="price">Price: ₹249</p>
+            </div>
+            <div class="p-box wm">
+                <img src="inlet pipe.jpg" alt="">
+                <h1>Inlet Pipe</h1>
+                <p class="price">Price: ₹335</p>
+            </div>
+            <div class="p-box wm">
+                <img src="socker.jpg" alt="">
+                <h1>Socker</h1>
+                <p class="price">Price: ₹300</p>
+            </div>
+            <div class="p-box wm">
+                <img src="gear box.jpg" alt="">
+                <h1></h1>
+                <p class="price">Price: ₹850</p>
+            </div>
+
+            <div class="p-box wm">
+                <img src="bulsitor.jpg" alt="">
+                <h1>Bulsitor</h1>
+                <p class="price">Price: ₹1355</p>
+            </div>
+
+            <div class="p-box tool">
+                <img src="plass.jpg" alt="">
+                <h1>Plass</h1>
+                <p class="price">Price: ₹100</p>
+            </div>
+            <div class="p-box tool">
+                <img src="tester.jpg" alt="">
+                <h1>Tester</h1>
+                <p class="price">Price: ₹200</p>
+            </div>
+            <div class="p-box tool">
+                <img src="screw driver.jpg" alt="">
+                <h1>Screw Driver</h1>
+                <p class="price">Price: ₹300</p>
+            </div>
+            <div class="p-box tool">
+                <img src="inchi tape.webp" alt="">
+                <h1>Inchi Tape</h1>
+                <p class="price">Price: ₹150</p>
+            </div>
+            <div class="p-box tool">
+                <img src="multimeter.webp" alt="">
+                <h1>multimeter</h1>
+                <p class="price">Price: ₹200</p>
+            </div>
+            <div class="p-box tool">
+                <img src="drill bit.jpg" alt="">
+                <h1>Drill Bit</h1>
+                <p class="price">Price: ₹100</p>
+            </div>
+            <div class="p-box tool">
+                <img src="allen keyset.jpg" alt="">
+                <h1>Allen Key Set</h1>
+                <p class="price">Price: ₹150</p>
+            </div>
+            <div class="p-box tool">
+                <img src="water level.jpg" alt="">
+                <h1>Water Level Indicator</h1>
+                <p class="price">Price: ₹280</p>
+            </div>
+            <div class="p-box tool">
+                <img src="noz plass.jpg" alt="">
+                <h1>Noz Plass</h1>
+                <p class="price">Price: ₹500</p>
+            </div>
+            <div class="p-box tool">
+                <img src="pana and chavi.jpg" alt="">
+                <h1>Pana and Chavi</h1>
+                <p class="price">Price: ₹200</p>
+            </div>
+            <div class="p-box tool">
+                <img src="all range capacitors.jpeg" alt="">
+                <h1>All Range Capacitors</h1>
+                <p class="price">Price: ₹150</p>
+            </div>
+            <div class="p-box electric">
+                <img src="hammer.jpg" alt="">
+                <h1>Hammer</h1>
+                <p class="price">Price: ₹300</p>
+            </div>
+            <div class="p-box electric">
+                <img src="switch.png" alt="">
+                <h1>Switch</h1>
+                <p class="price">Price: ₹15</p>
+            </div>
+            <div class="p-box electric">
+                <img src="socket.jpg" alt="">
+                <h1>Socket</h1>
+                <p class="price">Price: ₹100</p>
+            </div>
+            <div class="p-box electric">
+                <img src="extension board.jpg" alt="">
+                <h1>Extension Board</h1>
+                <p class="price">Price: ₹400</p>
+            </div>
+            <div class="p-box electric">
+                <img src="multiplug.webp" alt="">
+                <h1>Multiplug</h1>
+                <p class="price">Price: ₹275</p>
+            </div>
+            <div class="p-box electric">
+                <img src="bulb holder.webp" alt="">
+                <h1>Bulb Holder</h1>
+                <p class="price">Price: ₹10</p>
+            </div>
+            <div class="p-box electric">
+                <img src="led bulb.webp" alt="">
+                <h1>LED Bulb</h1>
+                <p class="price">Price: ₹150</p>
+            </div>
+            <div class="p-box electric">
+                <img src="charging bulb.jpeg" alt="">
+                <h1>charging LED Bulb</h1>
+                <p class="price">Price: ₹250</p>
+            </div>
+            <div class="p-box electric">
+                <img src="cell.webp" alt="">
+                <h1>AAA Cell</h1>
+                <p class="price">Price: ₹10</p>
+            </div>
+            <div class="p-box electric">
+                <img src="wires.jpg" alt="">
+                <h1>Wires</h1>
+                <p class="price">Price: ₹8</p>
+            </div>
+            <div class="p-box electric">
+                <img src="regulator.jpg" alt="">
+                <h1>Fan Regulator</h1>
+                <p class="price">Price: ₹150</p>
+            </div>
+            <div class="p-box electric">
+                <img src="16 ampere board.jpg" alt="">
+                <h1>16 Ampere Board</h1>
+                <p class="price">Price: ₹150</p>
+            </div>
+           
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="portfolio">
+        <img src="pb.webp" alt="">
+        <div class="content">
+            <div class="port">
+                <p class="count" data-target="10">0+</p>
+                <p>Years of Experience</p>
+            </div>
+            <div class="port">
+                <p class="count" data-target="400">0+</p>
+
+
+                <p>Happy Customers</p>
+            </div>
+            <div class="port">
+                <p class="count" data-target="100">0%</p>
+                <p>Genuine Products</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contact form-->
+
+    <div class="contact" id="contact">
+        <h1>Contact <span>Us</span></h1>
+
+        <div class="contact-form-container">
+            <form id="contact-form" action="/submit-form" method="POST">
+                <div class="flex1">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="flex2">
+                    <div class="form-group">
+                        <label for="phone">Phone :</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label for="message">Message:</label>
+
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-bt">
+                    <button type="submit">Submit</button>
+                </div>
+
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-texts">
+            <div class="about">
+                <h1>About Us</h1>
+                <p>Ajay Trading Co., your trusted partner in providing top-notch repair services and quality spare parts
+                    for air conditioners, refrigerators, and washing machines. With years of expertise and a commitment
+                    to excellence, we have established ourselves as a reliable name in the industry.</p>
+            </div>
+            <div class="flex">
+
+
+                <div class="links">
+                    <h1>Site Links</h1>
+                    <p><a href="index.html">Home</a></p>
+                    <p> <a href="#services">Services</a></p>
+                    <p><a href="product.html">Products</a></p>
+                    <p><a href="#contact">Contact Us</a></p>
+
+                </div>
+
+                <div class="coinfo">
+                    <h1>Contact Info</h1>
+                    <p>Ajay trading Co., Sec 2A Road, Alampur, U.I.T., Bhiwadi, Rajasthan</p>
+                    <p>Phone: 8619065316</p>
+                </div>
+            </div>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d522.6834059091867!2d76.83706986249615!3d28.201818446302166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d374095732057%3A0xa083ae2412c62f97!2sAjay%20trading%20Co.!5e0!3m2!1sen!2sin!4v1720887061853!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </footer>
+    <div class="copyright">
+        <p> Ajay Trading Co. <i class='bx bx-copyright'></i>. All rights reserved. Designed by <a href="https://www.linkedin.com/in/saumil-gupta-6a8693272/" target="_blank" style="text-decoration: none; color: skyblue;">Saumil Gupta</a>
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

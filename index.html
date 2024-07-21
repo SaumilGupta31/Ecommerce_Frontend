@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Trading Co</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="overlay" onclick="hideMenu()"></div>
+
+    <nav>
+        <img src="logo.png" alt="logo">
+        <button class="menu" onclick="toggleMenu()"><i class='bx bx-menu'></i></button>
+        <button class="cross" onclick="rtoggleMenu()"><i class='bx bx-x'></i></button>
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <div class="dropdown">
+                <li><a onclick="dropdownDisplay()">Services</a></li>
+                <div class="dropdown-content">
+                    <a href="#services">AC Repairing</a>
+                    <a href="#services">Washing Machine Repairing</a>
+                    <a href="#services">Refridgerator Repairing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li><a onclick="dropdownDisplay()" href="product.html">Products</a></li>
+                <div class="dropdown-content dropdown1">
+                    <a href="product.html">AC Spare Parts</a>
+                    <a href="product.html">Washing Machine Spare Parts</a>
+                    <a href="product.html">Refridgerator Spare Parts</a>
+                    <a href="product.html">Tools</a>
+                </div>
+            </div>
+            <li><a href="">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <div class="search">
+                <form onsubmit="searchProducts(event)">
+                    <input type="text" id="search-input" placeholder="Search...">
+                    <button type="submit"><img src="search.png" alt=""></button>
+                </form>
+            </div>
+        </ul>
+
+    </nav>
+
+    <!--slider start-->
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <img class="slide" src="s.png" alt="">
+                <img class="slide" src="s1.png" alt="">
+                <img class="slide" src="s3.png" alt="">
+                <img class="slide" src="s2.png" alt="">
+                <img src="s4.png" alt="" class="slide">
+                <img src="s5.png" alt="" class="slide">
+            </div>
+            <div class="navigation">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="slider-content">
+                <p class="p1">Ajay Trading Co.</p>
+
+
+
+                <p class="typewriter"></p>
+
+                <p class="type">"From Fixing to Parts, We have Got You Covered" </p>
+
+
+
+                <button>Explore</button>
+                <img src="intro.png" alt="" style="height: 30vh; width: auto;">
+                <p class="intro">Welcome to Ajay Trading Co., your trusted partner for all your home appliance needs.
+                    Specializing in the repair of air conditioners, refrigerators, and washing machines, we bring years
+                    of expertise and dedication to ensure your appliances run smoothly. In addition to our top-notch
+                    repair services, we offer a wide range of tools and spare parts to keep your household devices in
+                    perfect condition. At Ajay Trading Co., we are committed to delivering reliable solutions and
+                    exceptional customer service, making us your go-to destination for appliance maintenance and quality
+                    parts.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!--second page start-->
+
+    <div class="services" id="services">
+        <h>Services</h>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="se1.png" alt="">
+                    <h1>AC Repairing</h1><a href="#contact"><button>Contact Now</button></a>
+                </div>
+                <div class="swiper-slide"><img src="se2.png" alt="">
+                    <h1>Washing Machine Repairing</h1><a href="#contact"><button>Contact Now</button></a>
+                </div>
+                <div class="swiper-slide"><img src="se3.png" alt="">
+                    <h1>Refridgerator Repairing</h1><a href="#contact"><button>Contact Now</button></a>
+                </div>
+
+            </div>
+            <br>
+            <div class="swiper-pagination"></div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="products">
+        <h>Products</h>
+
+        <div class="swiper p01">
+            <div class="swiper-wrapper p02 ">
+                <div class="swiper-slide product"><img src="p1.webp" alt="">
+                    <h1 class="ph1">AC Spare Parts</h1><button class="pbt">See All</button>
+                </div>
+                <div class="swiper-slide product"><img src="p2.jpg" alt="">
+                    <h1 class="ph1">Washing Machine Spare Parts</h1><a href="product.html"><button class="pbt">See All</button></a>
+                </div>
+                <div class="swiper-slide product"><img src="p3.jpg" alt="">
+                    <h1 class="ph1">Refridgerator Spare Parts</h1><a href="product.html"><button class="pbt">See All</button></a>
+                </div>
+                <div class="swiper-slide product"><img src="p4.jpg" alt="">
+                    <h1 class="ph1">Tools</h1><a href="product.html"><button class="pbt">See All</button></a>
+                </div>
+
+            </div>
+            <br>
+            <div class="swiper-pagination"></div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="portfolio">
+        <img src="pb.webp" alt="">
+        <div class="content">
+            <div class="port">
+                <p class="count" data-target="10">0+</p>
+                <p>Years of Experience</p>
+            </div>
+            <div class="port">
+                <p class="count" data-target="400">0+</p>
+
+
+                <p>Happy Customers</p>
+            </div>
+            <div class="port">
+                <p class="count" data-target="100">0%</p>
+                <p>Genuine Products</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contact form-->
+
+    <div class="contact" id="contact">
+        <h1>Contact <span>Us</span></h1>
+
+        <div class="contact-form-container">
+            <form id="contact-form" action="/submit-form" method="POST">
+                <div class="flex1">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="flex2">
+                    <div class="form-group">
+                        <label for="phone">Phone :</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label for="message">Message:</label>
+
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-bt">
+                    <button type="submit">Submit</button>
+                </div>
+
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-texts">
+            <div class="about">
+                <h1>About Us</h1>
+                <p>Ajay Trading Co., your trusted partner in providing top-notch repair services and quality spare parts
+                    for air conditioners, refrigerators, and washing machines. With years of expertise and a commitment
+                    to excellence, we have established ourselves as a reliable name in the industry.</p>
+            </div>
+            <div class="flex">
+
+
+                <div class="links">
+                    <h1>Site Links</h1>
+                    <p><a href="index.html">Home</a></p>
+                    <p> <a href="#services">Services</a></p>
+                    <p><a href="product.html">Products</a></p>
+                    <p><a href="#contact">Contact Us</a></p>
+
+                </div>
+
+                <div class="coinfo">
+                    <h1>Contact Info</h1>
+                    <p>Ajay trading Co., Sec 2A Road, Alampur, U.I.T., Bhiwadi, Rajasthan</p>
+                    <p>Phone: 8619065316</p>
+                </div>
+            </div>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d522.6834059091867!2d76.83706986249615!3d28.201818446302166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d374095732057%3A0xa083ae2412c62f97!2sAjay%20trading%20Co.!5e0!3m2!1sen!2sin!4v1720887061853!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </footer>
+    <div class="copyright">
+        <p> Ajay Trading Co. <i class='bx bx-copyright'></i>. All rights reserved. Designed by <a href="https://www.linkedin.com/in/saumil-gupta-6a8693272/" target="_blank" style="text-decoration: none; color: skyblue; cursor: pointer;">Saumil Gupta</a>
+        </p>
+    </div>
+
+    <div class="floating-buttons">
+        <a href="tel:+918619065316" class="phone-button" target="_blank">
+            <i class='bx bxs-phone-call' style="font-size: 30px; color: black;"></i>
+        </a>
+        <a href="https://wa.me/8619065316" class="whatsapp-button" target="_blank">
+            <i class='bx bxl-whatsapp' style="font-size: 30px; color: white;" ></i>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
